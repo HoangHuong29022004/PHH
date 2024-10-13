@@ -119,8 +119,8 @@
     },
     "github.copilot.chat.experimental.temporalContext.enabled": true,
     "explorer.confirmPasteNative": false,
-    "php.validate.enable": false,
-    "php.suggest.basic": false,
+    // "php.validate.enable": false,
+    // "php.suggest.basic": false,
     "explorer.confirmDragAndDrop": false,
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#e778af"
