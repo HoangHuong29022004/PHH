@@ -14,18 +14,24 @@
 
 ## Thay đổi phiên bản PHP
 
-1. Chọn phiên bản PHP mặc định:
+1. Chọn phiên bản PHP mặc định (cách 1 - tương tác):
    ```bash
    sudo update-alternatives --config php
    ```
    Sau khi chạy lệnh này, bạn sẽ thấy danh sách các phiên bản PHP. Nhập số tương ứng với phiên bản bạn muốn sử dụng.
 
-2. Cài đặt phiên bản PHP cụ thể (ví dụ PHP 7.4):
+2. Chọn phiên bản PHP mặc định (cách 2 - trực tiếp):
+   ```bash
+   sudo update-alternatives --set php /usr/bin/php8.1
+   ```
+   Lệnh này sẽ set PHP 8.1 làm phiên bản mặc định ngay lập tức.
+
+3. Cài đặt phiên bản PHP cụ thể (ví dụ PHP 7.4):
    ```bash
    sudo apt install php7.4
    ```
 
-3. Gỡ cài đặt phiên bản PHP không sử dụng (ví dụ PHP 7.4):
+4. Gỡ cài đặt phiên bản PHP không sử dụng (ví dụ PHP 7.4):
    ```bash
    sudo apt remove php7.4
    ```
@@ -53,4 +59,4 @@
   hoặc
   ```bash
   sudo systemctl restart nginx
-  ``` 
+  ```
