@@ -1,0 +1,24 @@
+# Ignore all log files
+*.log
+
+# Ignore all temporary files
+*.tmp
+*.temp
+
+# Ignore all output files
+*.out
+
+# Ignore all compiled files
+*.o
+*.so
+
+# Ignore any specific files or directories
+mybash/run/*.sh~
+mybash/run/*.bak
+mybash/run/*.swp
+
+# Ignore node_modules if any Node.js projects are present
+node_modules/
+
+# Ignore any other specific files or directories you don't want to track
+# Add more patterns as needed 
