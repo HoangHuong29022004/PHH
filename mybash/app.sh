@@ -22,15 +22,15 @@ scan_folder() {
   done
 }
 
-scan_folder
-
 while true; do
+  scan_folder
   read -p "Please enter the number of your choice: " REPLY
   if [[ $REPLY =~ ^[0-9]+$ ]] && [ $REPLY -ge 0 ] && [ $REPLY -lt $INDEX ]; then
     echo -e "${ORANGE}---> Selected Script: ${FILES[$REPLY]}...${NORMAL}"
     bash ${FILES[$REPLY]}
-    break
+    echo -e "${GREEN}Script execution completed.${NORMAL}"
   else
     echo -e "${RED}Invalid choice. Please enter a valid number between 0 and $((INDEX - 1)).${NORMAL}"
   fi
+  echo -e "${BLUE}Returning to the main menu...${NORMAL}"
 done
