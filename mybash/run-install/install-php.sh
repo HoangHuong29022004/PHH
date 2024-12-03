@@ -9,10 +9,20 @@ ORANGE="\\033[1;33m"
 
 echo -e "${BLUE}=== PHP Installation Script ===${NORMAL}"
 
+# Prompt user for PHP version
+read -p "Enter PHP version to install (e.g., 8.1): " version
+
+# Check if PHP is already installed
+if php -v | grep -q "PHP $version"; then
+    echo -e "${GREEN}PHP $version is already installed!${NORMAL}"
+    php -v
+    exit 0
+fi
+
 # Function to install PHP
 install_php() {
     local version=$1
-    
+
     # Update package list
     echo -e "${GREEN}Updating package list...${NORMAL}"
     sudo apt update
@@ -49,9 +59,6 @@ install_php() {
     echo -e "${BLUE}PHP version installed:${NORMAL}"
     php -v
 }
-
-# Prompt user for PHP version
-read -p "Enter PHP version to install (e.g., 8.1): " version
 
 # Validate input
 if [[ $version =~ ^[0-9]+\.[0-9]+$ ]]; then

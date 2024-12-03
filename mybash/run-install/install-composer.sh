@@ -9,6 +9,13 @@ ORANGE="\\033[1;33m"
 
 echo -e "${BLUE}=== Composer Installation Script ===${NORMAL}"
 
+# Check if Composer is already installed
+if command -v composer &> /dev/null; then
+    echo -e "${GREEN}Composer is already installed!${NORMAL}"
+    echo -e "${BLUE}Composer version: ${NORMAL}$(composer --version)"
+    exit 0
+fi
+
 # Download the installer
 echo -e "${GREEN}Downloading Composer installer...${NORMAL}"
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -35,4 +42,4 @@ rm composer-setup.php
 
 # Verify installation
 echo -e "${BLUE}Composer version installed:${NORMAL}"
-composer --version 
+composer --version
