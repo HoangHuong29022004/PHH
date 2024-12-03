@@ -1,2 +1,1 @@
-# backup
-    "git.autofetch": true
+# backup seting window và ubuntu
