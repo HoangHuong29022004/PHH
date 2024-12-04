@@ -10,6 +10,9 @@ ORANGE="\\033[1;33m"
 # Store the original directory
 MYBASH_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# Setup permissions for all scripts
+find "$MYBASH_DIR" -type f -name "*.sh" -exec chmod +x {} \;
+
 # Function to scan the folder and list scripts
 scan_folder() {
   FILES_PATH=$(ls run/*.sh)
@@ -22,19 +25,24 @@ scan_folder() {
     echo -e "${GREEN}[$INDEX]${NORMAL} ${FILES[$INDEX]}"
     INDEX=$((INDEX + 1))
   done
+  echo -e "${ORANGE}[b] Back to main menu${NORMAL}"
 }
 
 while true; do
   cd "$MYBASH_DIR"
   scan_folder
-  read -p "Please enter the number of your choice: " REPLY
-  if [[ $REPLY =~ ^[0-9]+$ ]] && [ $REPLY -ge 0 ] && [ $REPLY -lt $INDEX ]; then
+  read -p "Please enter your choice: " REPLY
+  
+  if [ "$REPLY" = "b" ]; then
+    exit 0
+  elif [[ $REPLY =~ ^[0-9]+$ ]] && [ $REPLY -ge 0 ] && [ $REPLY -lt $INDEX ]; then
     echo -e "${ORANGE}---> Selected Script: ${FILES[$REPLY]}...${NORMAL}"
     bash ${FILES[$REPLY]}
     cd "$MYBASH_DIR"
     echo -e "${GREEN}Script execution completed.${NORMAL}"
   else
-    echo -e "${RED}Invalid choice. Please enter a valid number between 0 and $((INDEX - 1)).${NORMAL}"
+    echo -e "${RED}Invalid choice. Please enter a valid number or 'b' to go back.${NORMAL}"
   fi
-  echo -e "${BLUE}Returning to the main menu...${NORMAL}"
+  echo -e "${BLUE}Press Enter to continue...${NORMAL}"
+  read
 done
