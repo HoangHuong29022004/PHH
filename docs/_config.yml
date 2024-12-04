@@ -1,10 +1,11 @@
 title: Phạm Hoàng Hương - Backend Developer
 description: Portfolio và thông tin cá nhân của Phạm Hoàng Hương
 author: Phạm Hoàng Hương
-url: https://hoanghuong29022004.github.io/PHH/
+url: https://hoanghuong29022004.github.io
+baseurl: "/PHH"
 
 # Build settings
-markdown: GFM
+markdown: kramdown
 theme: jekyll-theme-primer
 plugins:
   - jekyll-feed
@@ -19,5 +20,3 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
-
-baseurl: "/PHH"

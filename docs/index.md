@@ -1,3 +1,9 @@
+---
+layout: default
+title: Phạm Hoàng Hương - Backend Developer
+---
+
+<!-- Nội dung hiện tại của bạn -->
 <div class="container">
 
 # Phạm Hoàng Hương - Backend Developer
