@@ -9,6 +9,14 @@ ORANGE="\\033[1;33m"
 
 echo -e "${BLUE}=== OpenVPN Auto-Start Setup ===${NORMAL}"
 
+# Check if service already exists and is running
+if systemctl is-active --quiet visualweber-vpn; then
+    echo -e "${GREEN}OpenVPN auto-start is already setup and running!${NORMAL}"
+    echo -e "${BLUE}You can check the status with:${NORMAL}"
+    echo -e "${ORANGE}sudo systemctl status visualweber-vpn${NORMAL}"
+    exit 0
+fi
+
 # Check if OpenVPN is installed
 if ! command -v openvpn &> /dev/null; then
     echo -e "${ORANGE}Installing OpenVPN...${NORMAL}"
