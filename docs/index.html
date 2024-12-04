@@ -1,74 +1,215 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phạm Hoàng Hương - Backend Developer</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.scss">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Cursor custom -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <h1>Phạm Hoàng Hương - Backend Developer</h1>
-            <nav>
-                <ul>
-                    <li><a href="#intro">Giới Thiệu</a></li>
-                    <li><a href="#skills">Kỹ Năng</a></li>
-                    <li><a href="projects.html">Dự Án</a></li>
-                    <li><a href="#contact">Liên Hệ</a></li>
-                </ul>
+            <nav class="nav">
+                <div class="logo" data-aos="fade-right">
+                    <span class="logo-text">PHH</span>
+                </div>
+                <div class="nav-links" data-aos="fade-left">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="intro" class="intro">
-            <div class="container">
-                <h2>👋 Giới Thiệu</h2>
-                <p>Xin chào! Tôi là Phạm Hoàng Hương, sinh ngày 29/02/2004. Là một Backend Developer với niềm đam mê về phát triển web và công nghệ. Tôi đặc biệt yêu thích việc làm việc với PHP/Laravel và các công nghệ backend hiện đại. Luôn tìm kiếm cơ hội để học hỏi và phát triển bản thân trong lĩnh vực công nghệ thông tin.</p>
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2>🛠 Kỹ Năng Chuyên Môn</h2>
-                <div class="skill-badges">
-                    <div class="skill-badge">PHP/Laravel</div>
-                    <div class="skill-badge">Vue.js</div>
-                    <div class="skill-badge">MySQL</div>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" style="--progress-width: 85%"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>📫 Liên Hệ</h2>
-                <ul>
-                    <li><strong>Email:</strong> <a href="mailto:phamhoanghuong.dev@gmail.com">phamhoanghuong.dev@gmail.com</a></li>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/hoanghuong29022004">github.com/hoanghuong29022004</a></li>
-                    <li><strong>Phone:</strong> 0932507102</li>
-                    <li><strong>Địa chỉ:</strong> Hà Nội, Việt Nam</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <p>&copy; 2023 Phạm Hoàng Hương. All rights reserved.</p>
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <h1 class="glitch" data-text="Phạm Hoàng Hương">Phạm Hoàng Hương</h1>
+                    <div class="typewriter">
+                        <span class="typed-text"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </div>
+                    <p class="hero-description">Backend Developer with passion for creating elegant solutions</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left">
+                    <div class="blob-animation"></div>
+                    <img src="assets/images/profile.png" alt="Profile" class="profile-image">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>Xin chào! Tôi là Phạm Hoàng Hương, sinh ngày 29/02/2004. Là một Backend Developer với niềm đam mê về phát triển web và công nghệ.</p>
+                    <div class="about-cards">
+                        <div class="about-card" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fas fa-code"></i>
+                            <h3>Development</h3>
+                            <p>Clean and efficient code</p>
+                        </div>
+                        <div class="about-card" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Design</h3>
+                            <p>Modern UI/UX solutions</p>
+                        </div>
+                        <div class="about-card" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive</h3>
+                            <p>Mobile-first approach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="particles"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-grid">
+                    <div class="skill-item" data-aos="flip-left">
+                        <div class="skill-icon">
+                            <i class="fab fa-php"></i>
+                        </div>
+                        <h3>PHP/Laravel</h3>
+                        <div class="skill-progress">
+                            <div class="progress" data-value="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-aos="flip-left" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <i class="fab fa-vuejs"></i>
+                        </div>
+                        <h3>Vue.js</h3>
+                        <div class="skill-progress">
+                            <div class="progress" data-value="75"></div>
+                        </div>
+                    </div>
+                    <!-- Add more skills -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:phamhoanghuong.dev@gmail.com">phamhoanghuong.dev@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/hoanghuong29022004" target="_blank">hoanghuong29022004</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>0932507102</p>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="footer-text">&copy; 2024 Phạm Hoàng Hương. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <div class="rain"></div>
-    <script src="assets/js/rain.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="assets/js/compress-common.js"></script>
 </body>
-
 </html>

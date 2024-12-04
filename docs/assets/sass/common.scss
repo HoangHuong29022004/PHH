@@ -1,0 +1,213 @@
+@import '~bootstrap/scss/bootstrap';
+
+// Variables
+$primary-color: #6c63ff;
+$secondary-color: #2ecc71;
+$dark-color: #2c3e50;
+$light-color: #ecf0f1;
+$gradient: linear-gradient(45deg, $primary-color, $secondary-color);
+
+// Mixins
+@mixin glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Global Styles
+body {
+    font-family: 'Poppins', sans-serif;
+    background: $light-color;
+    color: $dark-color;
+    transition: all 0.3s ease;
+    
+    &.dark-mode {
+        background: $dark-color;
+        color: $light-color;
+    }
+}
+
+// Loader
+.loader {
+    @include flex-center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $light-color;
+    z-index: 9999;
+    
+    &-circle {
+        width: 50px;
+        height: 50px;
+        border: 5px solid $primary-color;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+// Custom Cursor
+.cursor {
+    width: 10px;
+    height: 10px;
+    background: $primary-color;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    
+    &-follower {
+        width: 30px;
+        height: 30px;
+        border: 2px solid $primary-color;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9998;
+        transition: transform 0.1s;
+    }
+}
+
+// Navigation
+.nav {
+    @include glass-effect;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    
+    &-links {
+        .nav-link {
+            color: $dark-color;
+            margin: 0 1rem;
+            position: relative;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: $gradient;
+                transition: width 0.3s ease;
+            }
+            
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    min-height: 100vh;
+    @include flex-center;
+    position: relative;
+    overflow: hidden;
+    
+    &-content {
+        text-align: center;
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: $gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+// Skills Section
+.skills {
+    padding: 5rem 0;
+    
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    
+    &-item {
+        @include glass-effect;
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+// Contact Form
+.contact-form {
+    .form-group {
+        position: relative;
+        margin-bottom: 2rem;
+        
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-bottom: 2px solid $dark-color;
+            background: transparent;
+            transition: all 0.3s ease;
+            
+            &:focus {
+                outline: none;
+                border-bottom-color: $primary-color;
+            }
+        }
+        
+        label {
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus ~ label,
+        textarea:focus ~ label,
+        input:valid ~ label,
+        textarea:valid ~ label {
+            top: -20px;
+            font-size: 0.8rem;
+            color: $primary-color;
+        }
+    }
+}
+
+// Animations
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
