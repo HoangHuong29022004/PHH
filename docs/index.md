@@ -1,3 +1,5 @@
+<div class="container">
+
 # Phạm Hoàng Hương - Backend Developer
 
 ## 👋 Giới Thiệu
@@ -15,12 +17,18 @@ Xin chào! Tôi là Phạm Hoàng Hương, sinh ngày 29/02/2004. Là một Back
 - Làm việc với các công nghệ: PHP, Laravel, MySQL
 - Tham gia vào quy trình phát triển phần mềm theo mô hình Agile
 
+<section>
 ## 🛠 Kỹ Năng Chuyên Môn
-### Backend Development
-- PHP/Laravel (Framework chính)
-- RESTful API
-- Database Design
-- C++
+<div class="skill-badge">PHP/Laravel</div>
+<div class="skill-badge">Vue.js</div>
+<div class="skill-badge">MySQL</div>
+</section>
+
+<div class="progress-bar">
+  <div class="progress" style="--progress-width: 85%"></div>
+</div>
+
+</div>
 
 ### Frontend Development
 - JavaScript/Vue.js/React
@@ -77,3 +85,5 @@ Xin chào! Tôi là Phạm Hoàng Hương, sinh ngày 29/02/2004. Là một Back
 - AWS Cloud Services
 - Testing và CI/CD
 - Design Patterns trong PHP
+
+</div>
