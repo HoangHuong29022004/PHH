@@ -19,3 +19,5 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
+
+baseurl: "/PHH"
