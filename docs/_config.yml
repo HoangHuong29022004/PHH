@@ -1,0 +1,21 @@
+title: Phạm Hoàng Hương - Backend Developer
+description: Portfolio và thông tin cá nhân của Phạm Hoàng Hương
+author: Phạm Hoàng Hương
+url: https://hoanghuong29022004.github.io/PHH/
+
+# Build settings
+markdown: GFM
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
