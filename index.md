@@ -1,70 +1,79 @@
-# Phạm Hoàng Hương - Fullstack Developer
+# Phạm Hoàng Hương - Backend Developer
 
 ## 👋 Giới Thiệu
-Xin chào! Tôi là Phạm Hoàng Hương, một Fullstack Developer với đam mê về công nghệ và phát triển phần mềm. Tôi luôn tìm kiếm cơ hội để học hỏi và phát triển bản thân trong lĩnh vực công nghệ thông tin.
+Xin chào! Tôi là Phạm Hoàng Hương, sinh ngày 29/02/2004. Là một Backend Developer với niềm đam mê về phát triển web và công nghệ. Tôi đặc biệt yêu thích việc làm việc với PHP/Laravel và các công nghệ backend hiện đại. Luôn tìm kiếm cơ hội để học hỏi và phát triển bản thân trong lĩnh vực công nghệ thông tin.
 
 ## 🎓 Học Vấn
-- **Đại học**: [Tên trường đại học của bạn]
-- **Chuyên ngành**: [Chuyên ngành của bạn]
-- **Thời gian**: [Năm bắt đầu - Năm kết thúc]
+- **Trường**: Cao đẳng FPT Polytechnic
+- **Chuyên ngành**: Công nghệ thông tin
+- **Thời gian**: 2022 - Hiện tại
 
 ## 💼 Kinh Nghiệm Làm Việc
-### FSofts Company
-**Fullstack Developer** *(2024 - Hiện tại)*
-- Phát triển và duy trì các ứng dụng web sử dụng PHP/Laravel và Vue.js
-- Làm việc với cơ sở dữ liệu MySQL và MongoDB
-- Tối ưu hóa hiệu suất ứng dụng và cải thiện trải nghiệm người dùng
+### FPT Shop
+**Thực tập sinh** *(2023)*
+- Hỗ trợ phát triển và bảo trì các ứng dụng web nội bộ
+- Làm việc với các công nghệ: PHP, Laravel, MySQL
+- Tham gia vào quy trình phát triển phần mềm theo mô hình Agile
 
 ## 🛠 Kỹ Năng Chuyên Môn
-### Ngôn Ngữ Lập Trình
-- PHP
-- JavaScript/TypeScript
-- HTML/CSS
-- SQL
+### Backend Development
+- PHP/Laravel (Framework chính)
+- RESTful API
+- Database Design
+- C++
 
-### Framework & Công Nghệ
-- Laravel
-- Vue.js
-- Node.js
-- Docker
-- Git
+### Frontend Development
+- JavaScript/Vue.js/React
+- HTML5/CSS3
+- Responsive Design
 
-### Cơ Sở Dữ Liệu
+### Công Nghệ & Công Cụ
+- Laragon
+- Git/GitHub
 - MySQL
-- MongoDB
-- Redis
+- Visual Studio Code
+- Postman
+
+## 🌟 Dự Án Nổi Bật
+### Hệ Thống Quản Lý Bán Hàng
+- **Mô tả**: Xây dựng hệ thống quản lý bán hàng cho doanh nghiệp vừa và nhỏ
+- **Công nghệ**: Laravel, Vue.js, MySQL
+- **Vai trò**: Backend Developer
+- **Tính năng chính**: 
+  - Quản lý sản phẩm và kho hàng
+  - Xử lý đơn hàng
+  - Báo cáo doanh thu
+  - Quản lý khách hàng
+
+### Website Portfolio Cá Nhân
+- **Mô tả**: Trang web giới thiệu bản thân và các dự án
+- **Công nghệ**: React, GitHub Pages
+- **Link**: [https://github.com/hoanghuong29022004/PHH]
 
 ## 📫 Liên Hệ
 - **Email**: huong.ph@fsofts.com
-- **GitHub**: [Link GitHub của bạn]
-- **LinkedIn**: [Link LinkedIn của bạn]
-
-## 🌟 Dự Án Nổi Bật
-### [Tên Dự Án 1]
-- Mô tả ngắn về dự án
-- Công nghệ sử dụng
-- Vai trò của bạn trong dự án
-
-### [Tên Dự Án 2]
-- Mô tả ngắn về dự án
-- Công nghệ sử dụng
-- Vai trò của bạn trong dự án
+- **GitHub**: [github.com/hoanghuong29022004](https://github.com/hoanghuong29022004)
+- **Phone**: [Số điện thoại của bạn]
+- **Địa chỉ**: Hà Nội, Việt Nam
 
 ## 🌐 Ngôn Ngữ
 - Tiếng Việt (Bản ngữ)
-- Tiếng Anh (Trình độ của bạn)
-
-## 📚 Chứng Chỉ
-- [Tên chứng chỉ 1] - [Năm]
-- [Tên chứng chỉ 2] - [Năm]
+- Tiếng Anh (Giao tiếp cơ bản)
 
 ## 🎯 Mục Tiêu Nghề Nghiệp
-- Phát triển kỹ năng trong phát triển phần mềm full-stack
-- Học hỏi và áp dụng các công nghệ mới
-- Đóng góp vào các dự án mã nguồn mở
-- Chia sẻ kiến thức với cộng đồng lập trình viên
+- Trở thành Senior Backend Developer trong 3 năm tới
+- Phát triển chuyên sâu về Laravel và các công nghệ backend hiện đại
+- Học hỏi thêm về Cloud Computing và DevOps
+- Đóng góp vào cộng đồng mã nguồn mở
 
-## 🏆 Thành Tựu
-- [Thành tựu 1]
-- [Thành tựu 2]
-- [Thành tựu 3]
+## 💪 Điểm Mạnh
+- Khả năng học hỏi nhanh và thích nghi với công nghệ mới
+- Kỹ năng giải quyết vấn đề tốt
+- Làm việc nhóm hiệu quả
+- Tinh thần trách nhiệm cao
+
+## 🌱 Đang Học Thêm
+- Docker và Kubernetes
+- AWS Cloud Services
+- Testing và CI/CD
+- Design Patterns trong PHP
