@@ -6,155 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phạm Hoàng Hương - Backend Developer</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/animations.scss">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <header>
+    <header>
+        <div class="container">
             <h1>Phạm Hoàng Hương - Backend Developer</h1>
-        </header>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Giới Thiệu</a></li>
+                    <li><a href="#skills">Kỹ Năng</a></li>
+                    <li><a href="projects.html">Dự Án</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <section class="intro">
-            <h2> Giới Thiệu</h2>
-            <p>Xin chào! Tôi là Phạm Hoàng Hương, sinh ngày 29/02/2004. Là một Backend Developer với niềm đam mê về phát
-                triển web và công nghệ. Tôi đặc biệt yêu thích việc làm việc với PHP/Laravel và các công nghệ backend
-                hiện đại. Luôn tìm kiếm cơ hội để học hỏi và phát triển bản thân trong lĩnh vực công nghệ thông tin.</p>
-        </section>
-
-        <section class="education">
-            <h2>🎓 Học Vấn</h2>
-            <div class="education-item">
-                <h3>Cao đẳng FPT Polytechnic</h3>
-                <p>Chuyên ngành: Công nghệ thông tin</p>
-                <p>Thời gian: 2022 - Hiện tại</p>
+    <main>
+        <section id="intro" class="intro">
+            <div class="container">
+                <h2>👋 Giới Thiệu</h2>
+                <p>Xin chào! Tôi là Phạm Hoàng Hương, sinh ngày 29/02/2004. Là một Backend Developer với niềm đam mê về phát triển web và công nghệ. Tôi đặc biệt yêu thích việc làm việc với PHP/Laravel và các công nghệ backend hiện đại. Luôn tìm kiếm cơ hội để học hỏi và phát triển bản thân trong lĩnh vực công nghệ thông tin.</p>
             </div>
         </section>
 
-        <section class="experience">
-            <h2>💼 Kinh Nghiệm Làm Việc</h2>
-            <div class="experience-item">
-                <h3>FPT Shop</h3>
-                <h4>Thực tập sinh (2023)</h4>
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>🛠 Kỹ Năng Chuyên Môn</h2>
+                <div class="skill-badges">
+                    <div class="skill-badge">PHP/Laravel</div>
+                    <div class="skill-badge">Vue.js</div>
+                    <div class="skill-badge">MySQL</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="--progress-width: 85%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>📫 Liên Hệ</h2>
                 <ul>
-                    <li>Hỗ trợ phát triển và bảo trì các ứng dụng web nội bộ</li>
-                    <li>Làm việc với các công nghệ: PHP, Laravel, MySQL</li>
-                    <li>Tham gia vào quy trình phát triển phần mềm theo mô hình Agile</li>
+                    <li><strong>Email:</strong> <a href="mailto:phamhoanghuong.dev@gmail.com">phamhoanghuong.dev@gmail.com</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/hoanghuong29022004">github.com/hoanghuong29022004</a></li>
+                    <li><strong>Phone:</strong> 0932507102</li>
+                    <li><strong>Địa chỉ:</strong> Hà Nội, Việt Nam</li>
                 </ul>
             </div>
         </section>
+    </main>
 
-        <section class="skills">
-            <h2>🛠 Kỹ Năng Chuyên Môn</h2>
-            <div class="skill-badges">
-                <div class="skill-badge">PHP/Laravel</div>
-                <div class="skill-badge">Vue.js</div>
-                <div class="skill-badge">MySQL</div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress" style="--progress-width: 85%"></div>
-            </div>
-        </section>
-
-        <section class="frontend">
-            <h2>Frontend Development</h2>
-            <ul>
-                <li>JavaScript/Vue.js/React</li>
-                <li>HTML5/CSS3</li>
-                <li>Responsive Design</li>
-            </ul>
-        </section>
-
-        <section class="tools">
-            <h2>Công Nghệ & Công Cụ</h2>
-            <ul>
-                <li>Laragon</li>
-                <li>Git/GitHub</li>
-                <li>MySQL</li>
-                <li>Visual Studio Code</li>
-                <li>Postman</li>
-            </ul>
-        </section>
-
-        <section class="projects">
-            <h2>🌟 Dự Án Nổi Bật</h2>
-
-            <div class="project-item">
-                <h3>Hệ Thống Quản Lý Bán Hàng</h3>
-                <p><strong>Mô tả:</strong> Xây dựng hệ thống quản lý bán hàng cho doanh nghiệp vừa và nhỏ</p>
-                <p><strong>Công nghệ:</strong> Laravel, Vue.js, MySQL</p>
-                <p><strong>Vai trò:</strong> Backend Developer</p>
-                <h4>Tính năng chính:</h4>
-                <ul>
-                    <li>Quản lý sản phẩm và kho hàng</li>
-                    <li>Xử lý đơn hàng</li>
-                    <li>Báo cáo doanh thu</li>
-                    <li>Quản lý khách hàng</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <h3>Website Portfolio Cá Nhân</h3>
-                <p><strong>Mô tả:</strong> Trang web giới thiệu bản thân và các dự án</p>
-                <p><strong>Công nghệ:</strong> React, GitHub Pages</p>
-                <p><strong>Link:</strong> <a
-                        href="https://github.com/hoanghuong29022004/PHH">https://github.com/hoanghuong29022004/PHH</a>
-                </p>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>📫 Liên Hệ</h2>
-            <ul>
-                <li><strong>Email:</strong> <a
-                        href="mailto:phamhoanghuong.dev@gmail.com">phamhoanghuong.dev@gmail.com</a></li>
-                <li><strong>GitHub:</strong> <a
-                        href="https://github.com/hoanghuong29022004">github.com/hoanghuong29022004</a></li>
-                <li><strong>Phone:</strong> 0932507102</li>
-                <li><strong>Địa chỉ:</strong> Hà Nội, Việt Nam</li>
-            </ul>
-        </section>
-
-        <section class="languages">
-            <h2>🌐 Ngôn Ngữ</h2>
-            <ul>
-                <li>Tiếng Việt (Bản ngữ)</li>
-                <li>Tiếng Anh (Giao tiếp cơ bản)</li>
-            </ul>
-        </section>
-
-        <section class="goals">
-            <h2>🎯 Mục Tiêu Nghề Nghiệp</h2>
-            <ul>
-                <li>Trở thành Senior Backend Developer trong 3 năm tới</li>
-                <li>Phát triển chuyên sâu về Laravel và các công nghệ backend hiện đại</li>
-                <li>Học hỏi thêm về Cloud Computing và DevOps</li>
-                <li>Đóng góp vào cộng đồng mã nguồn mở</li>
-            </ul>
-        </section>
-
-        <section class="strengths">
-            <h2>💪 Điểm Mạnh</h2>
-            <ul>
-                <li>Khả năng học hỏi nhanh và thích nghi với công nghệ mới</li>
-                <li>Kỹ năng giải quyết vấn đề tốt</li>
-                <li>Làm việc nhóm hiệu quả</li>
-                <li>Tinh thần trách nhiệm cao</li>
-            </ul>
-        </section>
-
-        <section class="learning">
-            <h2>🌱 Đang Học Thêm</h2>
-            <ul>
-                <li>Docker và Kubernetes</li>
-                <li>AWS Cloud Services</li>
-                <li>Testing và CI/CD</li>
-                <li>Design Patterns trong PHP</li>
-            </ul>
-        </section>
-    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Phạm Hoàng Hương. All rights reserved.</p>
+        </div>
+    </footer>
 
     <div class="rain"></div>
     <script src="assets/js/rain.js"></script>
