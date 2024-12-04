@@ -1,33 +1,38 @@
 import 'bootstrap';
-import AOS from 'aos';
-import Typed from 'typed.js';
 
 // Initialize AOS
-AOS.init({
-    duration: 1000,
-    once: true
-});
-
-// Custom Cursor
 document.addEventListener('DOMContentLoaded', () => {
+    // Thay vì import AOS, sử dụng từ window object
+    if (window.AOS) {
+        window.AOS.init({
+            duration: 1000,
+            once: true
+        });
+    }
+
+    // Custom Cursor
     const cursor = document.querySelector('.cursor');
     const follower = document.querySelector('.cursor-follower');
     
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        
-        follower.style.left = e.clientX + 'px';
-        follower.style.top = e.clientY + 'px';
-    });
-});
+    if (cursor && follower) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            follower.style.left = e.clientX + 'px';
+            follower.style.top = e.clientY + 'px';
+        });
+    }
 
-// Typing Effect
-new Typed('.typed-text', {
-    strings: ['Backend Developer', 'Laravel Expert', 'Problem Solver'],
-    typeSpeed: 50,
-    backSpeed: 30,
-    loop: true
+    // Typing Effect (sử dụng Typed từ window object)
+    if (window.Typed) {
+        new window.Typed('.typed-text', {
+            strings: ['Backend Developer', 'Laravel Expert', 'Problem Solver'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    }
 });
 
 // Smooth Scrolling
