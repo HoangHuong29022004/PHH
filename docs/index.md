@@ -51,9 +51,9 @@ Xin chào! Tôi là Phạm Hoàng Hương, sinh ngày 29/02/2004. Là một Back
 - **Link**: [https://github.com/hoanghuong29022004/PHH]
 
 ## 📫 Liên Hệ
-- **Email**: huong.ph@fsofts.com
+- **Email**: phamhoanghuong.dev@gmail.com
 - **GitHub**: [github.com/hoanghuong29022004](https://github.com/hoanghuong29022004)
-- **Phone**: [Số điện thoại của bạn]
+- **Phone**: [0932507102]
 - **Địa chỉ**: Hà Nội, Việt Nam
 
 ## 🌐 Ngôn Ngữ
