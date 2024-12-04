@@ -1,0 +1,11 @@
+cd C:\Users\nguye
+wsl --shutdown
+
+[wsl2]
+memory=16GB
+swap=16GB
+
+
+wsl
+free -h
+

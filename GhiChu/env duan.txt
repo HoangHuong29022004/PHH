@@ -1,0 +1,21 @@
+DB_CONNECTION=mysql
+DB_HOST=103.169.35.190
+DB_PORT=3306
+DB_DATABASE=db_website-v1
+DB_USERNAME=db_website-v1
+DB_PASSWORD="QV2!52pcpW@3lW"
+
+composer install
+php artisan key:generate
+
+npm install
+
+npm install @mui/material @emotion/react @emotion/styled @mui/x-data-grid date-fns
+npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+
+php artisan module:make TenBang
+php artisan module:generate TenBang
+
+
+composer require tymon/jwt-auth
+composer require php-open-source-saver/jwt-auth

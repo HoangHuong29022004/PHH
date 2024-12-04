@@ -1,0 +1,13 @@
+composer install --ignore-platform-req=ext-sodium
+
+   rm -rf vendor
+   rm composer.lock
+   composer clear-cache
+   composer install --ignore-platform-req=ext-sodium
+
+Remove-Item -Recurse -Force vendor
+
+
+   composer clear-cache
+   rm -rf vendor
+   composer install

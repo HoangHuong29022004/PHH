@@ -1,0 +1,31 @@
+     composer require tymon/jwt-auth
+
+     php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+     php artisan jwt:secret
+
+     composer require nwidart/laravel-modules
+
+     php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"
+
+     php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider" --tag="config"
+
+     php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider" --tag="vite"
+
+composer dump-autoload
+
+php artisan module:make-migration create_customers_table Customer
+
+php artisan module:migrate Customer
+
+
+   php artisan config:clear
+   php artisan cache:clear
+   php artisan module:clear-compiled
+
+   php artisan module:make-migration create_customers_table Customer
+
+php artisan module:migrate Customer
+
+php artisan module:seed Customer
+
+php artisan jwt:secret

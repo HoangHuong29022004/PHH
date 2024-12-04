@@ -1,0 +1,45 @@
+1 Cài đặt Fish từ kho mặc định:
+sudo apt update
+sudo apt install fish
+
+2 Cài đặt phiên bản mới nhất của Fish:
+
+sudo apt-add-repository ppa:fish-shell/release-3
+
+3 Cập nhật hệ thống và cài đặt Fish:
+
+sudo apt update
+sudo apt install fish
+
+4 Chạy Fish shell:
+fish
+
+5 Đặt Fish làm shell mặc định:
+chsh -s /usr/bin/fish
+
+
+-----------------Cài phím tắt----------------------
+
+nano ~/.config/fish/config.fish
+alias p='php artisan'
+source ~/.config/fish/config.fish
+
+
+------------ xóa phím tắt----------------------
+
+nano ~/.config/fish/config.fish
+-- xóa dòng đã thêm
+source ~/.config/fish/config.fish
+
+
+nano ~/.config/fish/config.fish
+
+function fish_prompt
+    set -l cwd (prompt_pwd)
+    set -l short_cwd (string split -m 1 -r '/' $cwd | string join '/')
+    echo -n (whoami) ' ' $short_cwd ' > '
+end
+
+source ~/.config/fish/config.fish
+
+

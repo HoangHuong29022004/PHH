@@ -1,0 +1,25 @@
+DB_CONNECTION=mysql
+DB_HOST=103.169.35.190
+DB_PORT=3306
+DB_DATABASE=db_website-v1
+DB_USERNAME=db_website-v1
+DB_PASSWORD="QV2!52pcpW@3lW"
+
+composer instal
+php artisan key:generate
+
+npm install @mui/icons-material
+npm install @mui/material @emotion/react @emotion/styled    
+npm install date-fns                                                                                                        
+npm install typescript @types/react @types/react-dom           
+npm run dev    
+
+
+php artisan module:make TenBang
+php artisan module:generate TenBang 
+
+php artisan module:make-migration create_products_table Product
+
+php artisan module:migrate TenBange
+
+php artisan module:make-migration create_carts_table Cart

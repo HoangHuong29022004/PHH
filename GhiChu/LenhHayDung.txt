@@ -1,0 +1,23 @@
+ssh-keygen -t rsa -b 4096 -C "huong.ph@fsofts.com"
+ls -al ~/.ssh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
+ssh -T git@gitlab.com
+
+sudo update-alternatives --set php /usr/bin/php8.1
+
+sudo apt update
+sudo apt upgrade
+
+sudo nano /etc/nginx/sites-available/tanghatchomeo.code
+
+feature/huong
+
+git config --global user.email "huong.ph@fsofts.com"
+git config --global user.name "huong.ph-visualweber"
+
+
+superadmin@fsofts.com
+It@@246357
+

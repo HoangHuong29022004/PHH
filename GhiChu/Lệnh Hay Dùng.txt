@@ -1,0 +1,37 @@
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+
+code ~/.config/fish/config.fish
+
+
+
+Chuyển sang Zsh: Chạy lệnh sau để chuyển sang Zsh:
+zsh
+
+Tải lại file cấu hình: Sau khi đã chuyển sang Zsh, chạy lệnh sau để tải lại file cấu hình:
+source ~/.zshrc
+
+Nếu bạn muốn Zsh trở thành shell mặc định của mình, bạn có thể sử dụng lệnh chsh (change shell):
+
+Đặt Zsh làm shell mặc định: Chạy lệnh sau và nhập mật khẩu của bạn khi được yêu cầu:
+chsh -s $(which zsh)
+
+
+-----------------Cài phím tắt----------------------
+
+function a
+    php artisan serve
+end
+
+echo "function a; php artisan serve; end" >> ~/.config/fish/config.fish
+nano ~/.config/fish/config.fish
+source ~/.config/fish/config.fish
+
+-----------------------------------
+nano ~/.config/fish/config.fish
+alias p='php artisan'
+source ~/.config/fish/config.fish
+
+
+

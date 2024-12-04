@@ -1,0 +1,2 @@
+git config --global user.email "huong.ph@fsofts.com"
+git config --global user.name "Hoàng Hương"

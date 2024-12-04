@@ -1,0 +1,26 @@
+composer install
+
+npm install
+
+cp .env.example .env
+
+   DB_CONNECTION=mysql
+   DB_HOST=103.169.35.190
+   DB_PORT=3306
+   DB_DATABASE=db_luxadecor
+   DB_USERNAME=db_luxadecor
+   DB_PASSWORD="QV2!52pcpW@3lW"
+
+php artisan key:generate
+
+php artisan migrate
+
+
+cd frontend
+
+rm -rf node_modules
+npm install @vitejs/plugin-react-swc @swc/core
+npm install react-data-table-component
+npm install reactstrap @types/reactstrap
+npm install react-data-table-component
+npm install react-datepicker @types/react-datepicker

@@ -1,0 +1,3 @@
+Remove-Item -Recurse -Force
+
+npx tsc --noEmit

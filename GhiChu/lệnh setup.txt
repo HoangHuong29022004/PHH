@@ -1,0 +1,23 @@
+b1: mở thư mục dự án
+b2: cd đến backend: cd backend
+b3: composer i 
+hoăc 
+composer update symfony/css-selector symfony/event-dispatcher symfony/string symfony/yaml symfony/console
+composer install
+b4: npm i
+b5: npm audit fix
+b6: coppy .env.example ra tạo file env và dán vào
+b7: php artisan key:generate
+b8: php artisan jwt:secrect
+b9:  php artisan migrate
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_luxadecor
+DB_USERNAME=root
+DB_PASSWORD="Phh123@#"
+
+
+php artisan optimize
+php artisan migrate:fresh --seed
