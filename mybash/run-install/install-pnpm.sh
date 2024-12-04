@@ -9,27 +9,29 @@ ORANGE="\\033[1;33m"
 
 echo -e "${BLUE}=== PNPM Installation Script ===${NORMAL}"
 
-# Check if Node.js is installed
-if ! command -v node &> /dev/null; then
-    echo -e "${RED}Node.js is not installed. Please install Node.js first.${NORMAL}"
-    exit 1
-fi
-
-# Show current Node.js version
-echo -e "${GREEN}Node.js version: ${NORMAL}$(node -v)"
-
-# Check if pnpm is already installed
+# Check if PNPM is already installed
 if command -v pnpm &> /dev/null; then
     echo -e "${GREEN}PNPM is already installed!${NORMAL}"
-    echo -e "${BLUE}PNPM version: ${NORMAL}$(pnpm -v)"
+    echo -e "${BLUE}Current PNPM version: ${NORMAL}$(pnpm -v)"
     exit 0
 fi
 
-# Install pnpm using npm
-echo -e "${GREEN}Installing pnpm globally...${NORMAL}"
-npm install -g pnpm
+# If not installed, proceed with installation
+echo -e "${GREEN}PNPM not found. Starting installation...${NORMAL}"
 
-# Verify installation
+# Step 1: Update Package Lists
+echo -e "${GREEN}Updating package lists...${NORMAL}"
+sudo apt-get update
+
+# Step 2: Install Node.js and NPM
+echo -e "${GREEN}Installing Node.js and NPM...${NORMAL}"
+sudo apt-get install -y nodejs npm
+
+# Step 3: Install PNPM
+echo -e "${GREEN}Installing pnpm globally...${NORMAL}"
+sudo npm install -g pnpm
+
+# Step 4: Verify PNPM Installation
 if command -v pnpm &> /dev/null; then
     echo -e "${GREEN}PNPM installed successfully!${NORMAL}"
     echo -e "${BLUE}PNPM version: ${NORMAL}$(pnpm -v)"
