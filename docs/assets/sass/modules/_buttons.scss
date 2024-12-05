@@ -1,0 +1,27 @@
+// Button styles
+.btn {
+    @include flex-center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    
+    &-primary {
+        background: $primary-color;
+        color: white;
+        
+        &:hover {
+            background: darken($primary-color, 10%);
+        }
+    }
+    
+    &-outline {
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        
+        &:hover {
+            background: $primary-color;
+            color: white;
+        }
+    }
+} 

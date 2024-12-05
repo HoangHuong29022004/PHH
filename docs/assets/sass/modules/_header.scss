@@ -1,0 +1,39 @@
+// Header styles
+.header {
+    @include glass-effect;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    .nav {
+        @include flex-between;
+        padding: 1rem 2rem;
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            
+            &-text {
+                background: linear-gradient(45deg, $primary-color, $secondary-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .nav-links {
+            @include flex-center;
+            gap: 2rem;
+
+            .nav-link {
+                color: $text-color;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                
+                &:hover, &.active {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+} 
