@@ -1,10 +1,9 @@
 // Variables
-$primary-color: #3498db;
-$secondary-color: #2980b9;
-$accent-color: #e74c3c;
-$text-color: #2c3e50;
-$light-bg: #f5f7fa;
-$dark-bg: #2c3e50;
+$primary-color: #6C63FF;
+$secondary-color: #4A45B1;
+$accent-color: #FF6B6B;
+$dark-color: #2C3E50;
+$light-color: #F8F9FA;
 
 // Mixins
 @mixin glass-effect {
@@ -26,7 +25,7 @@ $dark-bg: #2c3e50;
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: $text-color;
+    color: $dark-color;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     margin: 0;
     padding: 0;
@@ -37,7 +36,7 @@ body {
 ::-webkit-scrollbar {
     width: 10px;
     &-track {
-        background: $light-bg;
+        background: $light-color;
     }
     &-thumb {
         background: $primary-color;
@@ -118,7 +117,7 @@ section {
 // Progress bars
 .progress-bar {
     height: 8px;
-    background: $light-bg;
+    background: $light-color;
     border-radius: 4px;
     margin: 1rem 0;
     overflow: hidden;
@@ -234,4 +233,6 @@ section {
         display: none;
     }
 }
+
+
 
