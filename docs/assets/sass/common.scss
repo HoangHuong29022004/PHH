@@ -1,31 +1,24 @@
 // Import all SCSS modules
-@import 'modules/variables';
-@import 'modules/mixins';
-@import 'modules/buttons';
-@import 'modules/header';
-@import 'modules/animations';
-@import 'modules/index';
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/buttons";
+@import "modules/header";
+@import "modules/animations";
+@import "modules/index";
+@import "modules/hero";
+@import "modules/about";
+@import "modules/skills";
+@import "modules/footer";
+@import "modules/projects";
 
 // Global styles
 body {
-    font-family: 'Poppins', sans-serif;
-    background: $bg-color;
-    color: $text-color;
+    font-family: "Poppins", sans-serif;
+    background: map-get($colors, background);
+    color: map-get($colors, text);
     margin: 0;
     padding: 0;
     min-height: 100vh;
-}
-
-// Container
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-// Sections
-section {
-    padding: 4rem 0;
 }
 
 // Container

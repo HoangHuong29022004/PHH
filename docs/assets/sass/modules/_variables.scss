@@ -1,5 +1,32 @@
-// Define SCSS variables
+// Color Palette
 $primary-color: #6c63ff;
 $secondary-color: #4a45b1;
+$accent-color: #ff6b6b;
+$dark-color: #2c3e50;
+$light-color: #f8f9fa;
+$text-color: #2c3e50;
 $bg-color: #f8f9fa;
-$text-color: #2c3e50; 
+
+// Modern Color Map
+$colors: (
+    primary: $primary-color,
+    secondary: $secondary-color,
+    accent: $accent-color,
+    dark: $dark-color,
+    light: $light-color,
+    text: $text-color,
+    background: $bg-color
+);
+
+// Gradient Definitions
+$gradients: (
+    primary: linear-gradient(135deg, $primary-color, $secondary-color),
+    accent: linear-gradient(45deg, $accent-color, adjust-hue($accent-color, 15deg)),
+    text: linear-gradient(45deg, $primary-color, $secondary-color)
+);
+
+// Animation Timing
+$transition-fast: 0.3s ease;
+$transition-medium: 0.5s ease;
+$transition-slow: 0.8s ease;
+ 
