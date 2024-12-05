@@ -1,20 +1,34 @@
 export const initRain = () => {
-    const createRaindrop = () => {
-        const raindrop = document.createElement('div');
-        raindrop.className = 'raindrop';
-        raindrop.style.left = Math.random() * 100 + 'vw';
-        raindrop.style.animationDuration = Math.random() * 1 + 0.5 + 's';
-        return raindrop;
-    };
+    console.log('Rain effect initializing...'); // Debug log
+    const rainContainer = document.querySelector('.rain');
+    if (!rainContainer) {
+        console.warn('Rain container not found');
+        return;
+    }
 
-    const rain = document.querySelector('.rain');
-    if (rain) {
-        setInterval(() => {
-            const raindrop = createRaindrop();
-            rain.appendChild(raindrop);
-            setTimeout(() => {
-                raindrop.remove();
-            }, 2000);
-        }, 100);
+    const particleCount = 200;
+
+    for (let i = 0; i < particleCount; i++) {
+        createRainDrop(rainContainer);
     }
 };
+
+function createRainDrop(container) {
+    const drop = document.createElement('div');
+    drop.className = 'rain-drop';
+
+    const startPositionX = Math.random() * 100;
+    const fallDuration = Math.random() * 1.5 + 1;
+    const delay = Math.random() * 3;
+    const size = Math.random() * 2 + 1;
+
+    drop.style.cssText = `
+        left: ${startPositionX}%;
+        width: ${size}px;
+        height: ${size * 15}px;
+        animation: fall ${fallDuration}s linear ${delay}s infinite;
+        opacity: ${Math.random() * 0.4 + 0.1};
+    `;
+
+    container.appendChild(drop);
+}

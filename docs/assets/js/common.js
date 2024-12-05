@@ -4,32 +4,28 @@ import 'bootstrap';
 import { themeToggle } from './modules/theme';
 import { initRain } from './modules/rain';
 import { customCursor } from './modules/cursor';
-import { initNavigation } from './modules/navigation';
-import { handleHeaderScroll, handleActiveLinks, toggleMobileMenu } from './modules/header';
-import Skills from './modules/skills'; // Correct import for Skills module
+import { initNavigation, handleActiveLinks } from './modules/navigation';
+import Skills from './modules/skills';
 import Footer from './modules/footer';
 import Projects from './modules/projects';
 
 // Khởi tạo khi DOM loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Khởi tạo các module
+    console.log('Initializing modules...'); // Debug log
+
+    // Khởi tạo các module cơ bản
     themeToggle();
     initRain();
     customCursor();
-    initNavigation();
-    handleHeaderScroll();
+    
+    // Navigation initialization
+    initNavigation(); // Đã bao gồm handleHeaderScroll
     handleActiveLinks();
 
-    // Initialize Skills module
+    // Initialize class-based modules
     new Skills();
-
-    // footer
     new Footer();
-
     new Projects();
-
-    // Mobile menu toggle listener
-    document.querySelector('.mobile-menu')?.addEventListener('click', toggleMobileMenu);
 
     // Khởi tạo AOS
     if (window.AOS) {
@@ -43,9 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
