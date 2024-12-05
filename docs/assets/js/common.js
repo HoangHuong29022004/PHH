@@ -4,6 +4,7 @@ import 'bootstrap';
 import { themeToggle } from './modules/theme';
 import { initRain } from './modules/rain';
 import { customCursor } from './modules/cursor';
+import { initNavigation } from './modules/navigation';
 
 // Khởi tạo khi DOM loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle();
     initRain();
     customCursor();
+    initNavigation();
 
     // Khởi tạo AOS
     if (window.AOS) {
