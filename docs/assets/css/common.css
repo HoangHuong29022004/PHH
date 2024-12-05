@@ -88,6 +88,7 @@
 .header .navbar .navbar-toggler {
   border: none;
   padding: 0.5rem;
+  background: transparent;
 }
 .header .navbar .navbar-toggler:focus {
   box-shadow: none;
@@ -114,14 +115,41 @@
 .header .navbar .navbar-toggler .navbar-toggler-icon::after {
   transform: translateY(6px);
 }
-.header .navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
-  background-color: transparent;
-}
-.header .navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon::before {
-  transform: rotate(45deg);
-}
-.header .navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon::after {
-  transform: rotate(-45deg);
+@media (max-width: 991.98px) {
+  .header .navbar .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.1);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  .header .navbar .navbar-collapse .navbar-nav {
+    padding: 1rem 0;
+  }
+  .header .navbar .navbar-collapse .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  .header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 0.8rem 1.5rem;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link i {
+    width: 20px;
+    text-align: center;
+    margin-right: 0.5rem;
+  }
+  .header .navbar .navbar-collapse .navbar-nav .theme-toggle {
+    margin: 1rem auto;
+  }
 }
 
 body.dark-mode .header {
@@ -141,23 +169,17 @@ body.dark-mode .header .navbar .navbar-toggler-icon::before,
 body.dark-mode .header .navbar .navbar-toggler-icon::after {
   background-color: #f8f9fa;
 }
-
 @media (max-width: 991.98px) {
-  .header .navbar .navbar-collapse {
-    background: rgba(255, 255, 255, 0.98);
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-  }
-  .header .navbar .navbar-collapse .nav-item {
-    margin: 0.5rem 0;
-  }
   body.dark-mode .header .navbar .navbar-collapse {
     background: rgba(44, 62, 80, 0.98);
   }
 }
+
+.header .navbar.scrolled {
+  padding: 0.5rem 0;
+  box-shadow: 0 5px 20px rgba(44, 62, 80, 0.1);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
