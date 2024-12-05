@@ -12080,7 +12080,7 @@ body.dark-mode {
   width: 2px;
   height: 100px;
   animation: fall linear infinite;
-  background: linear-gradient(transparent, rgba(108, 99, 255, 0.2), transparent);
+  background: linear-gradient(transparent, rgba(108, 99, 255, 0.4), transparent);
   filter: blur(1px);
 }
 @keyframes fall {
@@ -12089,10 +12089,10 @@ body.dark-mode {
     opacity: 0;
   }
   10% {
-    opacity: 0.4;
+    opacity: 0.8;
   }
   90% {
-    opacity: 0.4;
+    opacity: 0.8;
   }
   100% {
     transform: translateY(100vh) rotate(-2deg);
@@ -12715,4 +12715,85 @@ body.dark-mode {
   100% {
     width: 100%;
   }
+}
+body.dark-mode {
+  background: #2c3e50;
+  color: #ecf0f1;
+}
+body.dark-mode .header {
+  background: rgba(44, 62, 80, 0.95);
+}
+body.dark-mode .header .nav-link {
+  color: #ecf0f1;
+}
+body.dark-mode .header .nav-link:hover, body.dark-mode .header .nav-link.active {
+  color: #6c63ff;
+}
+body.dark-mode .hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95));
+}
+body.dark-mode .hero .hero-description {
+  color: rgba(236, 240, 241, 0.8);
+}
+body.dark-mode .about {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95));
+}
+body.dark-mode .about h3, body.dark-mode .about .h3 {
+  color: #6c63ff;
+}
+body.dark-mode .about p {
+  color: rgba(236, 240, 241, 0.8);
+}
+body.dark-mode .about .profile-list {
+  color: rgba(236, 240, 241, 0.9);
+}
+body.dark-mode .skills {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95));
+}
+body.dark-mode .skills .skill-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .skills .skill-item h3, body.dark-mode .skills .skill-item .h3 {
+  color: #6c63ff;
+}
+body.dark-mode .skills .skill-item p {
+  color: rgba(236, 240, 241, 0.8);
+}
+body.dark-mode .skills .progress {
+  background: rgba(236, 240, 241, 0.1);
+}
+body.dark-mode .contact {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95));
+}
+body.dark-mode .contact .contact-info .contact-item h4, body.dark-mode .contact .contact-info .contact-item .h4 {
+  color: #6c63ff;
+}
+body.dark-mode .contact .contact-info .contact-item p {
+  color: rgba(236, 240, 241, 0.8);
+}
+body.dark-mode .contact .contact-form input, body.dark-mode .contact .contact-form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ecf0f1;
+}
+body.dark-mode .contact .contact-form input:focus, body.dark-mode .contact .contact-form textarea:focus {
+  border-color: #6c63ff;
+}
+body.dark-mode .contact .contact-form label {
+  color: rgba(236, 240, 241, 0.8);
+  background: #2c3e50;
+}
+body.dark-mode .header {
+  background: rgba(44, 62, 80, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+body.dark-mode .theme-toggle i {
+  color: #ecf0f1;
+}
+body.dark-mode .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
 }

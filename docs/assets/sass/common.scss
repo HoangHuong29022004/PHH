@@ -187,7 +187,7 @@ body {
     animation: fall linear infinite;
     background: linear-gradient(
         transparent,
-        rgba(map-get($colors, primary), 0.2),
+        rgba(map-get($colors, primary), 0.4),
         transparent
     );
     filter: blur(1px);
@@ -198,10 +198,10 @@ body {
             opacity: 0;
         }
         10% {
-            opacity: 0.4;
+            opacity: 0.8;
         }
         90% {
-            opacity: 0.4;
+            opacity: 0.8;
         }
         100% {
             transform: translateY(100vh) rotate(-2deg);
@@ -872,6 +872,130 @@ body {
 @keyframes progress-animation {
     0% { width: 0; }
     100% { width: 100%; }
+}
+
+// Dark theme styles
+body.dark-mode {
+    background: $dark-color;
+    color: $light-color;
+
+    // Header
+    .header {
+        background: rgba(44, 62, 80, 0.95);
+        
+        .nav-link {
+            color: $light-color;
+            
+            &:hover, &.active {
+                color: $primary-color;
+            }
+        }
+    }
+
+    // Hero Section
+    .hero {
+        background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95));
+        
+        .hero-description {
+            color: rgba($light-color, 0.8);
+        }
+    }
+
+    // About Section
+    .about {
+        background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95));
+        
+        h3 {
+            color: $primary-color;
+        }
+        
+        p {
+            color: rgba($light-color, 0.8);
+        }
+        
+        .profile-list {
+            color: rgba($light-color, 0.9);
+        }
+    }
+
+    // Skills Section
+    .skills {
+        background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95));
+        
+        .skill-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            
+            h3 {
+                color: $primary-color;
+            }
+            
+            p {
+                color: rgba($light-color, 0.8);
+            }
+        }
+        
+        .progress {
+            background: rgba($light-color, 0.1);
+        }
+    }
+
+    // Contact Section
+    .contact {
+        background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95));
+        
+        .contact-info {
+            .contact-item {
+                h4 {
+                    color: $primary-color;
+                }
+                
+                p {
+                    color: rgba($light-color, 0.8);
+                }
+            }
+        }
+        
+        .contact-form {
+            input, textarea {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: $light-color;
+                
+                &:focus {
+                    border-color: $primary-color;
+                }
+            }
+            
+            label {
+                color: rgba($light-color, 0.8);
+                background: $dark-color;
+            }
+        }
+    }
+
+    // Glass effect modification for dark mode
+    @mixin glass-effect-dark {
+        background: rgba(44, 62, 80, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+        @include glass-effect-dark;
+    }
+
+    // Theme toggle button
+    .theme-toggle {
+        i {
+            color: $light-color;
+        }
+        
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
 }
 
 

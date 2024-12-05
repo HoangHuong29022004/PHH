@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const rain = document.querySelector('.rain');
+    if (!rain) {
+        console.error('Rain container not found!');
+        return;
+    }
+
     const numberOfDrops = 100;
     const colors = ['#6C63FF', '#4A45B1', '#FF6B6B'];
     
@@ -21,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
             animation-duration: ${duration}s;
             background: linear-gradient(
                 transparent,
-                ${color}20,
+                ${color}80,
                 transparent
             );
-            opacity: 0.4;
+            opacity: 0.8;
         `;
         
         rain.appendChild(drop);
@@ -34,9 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Initial drops
     for(let i = 0; i < numberOfDrops; i++) {
         setTimeout(createRainDrop, Math.random() * 5000);
     }
     
+    // Continuous rain
     setInterval(createRainDrop, 100);
+
+    console.log('Rain effect initialized');
 });
