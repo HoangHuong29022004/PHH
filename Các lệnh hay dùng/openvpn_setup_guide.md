@@ -17,9 +17,9 @@ StartLimitIntervalSec=0
 [Service]
 Type=simple
 User=root
-ExecStart=/usr/sbin/openvpn --config /home/huong/VisualWeber_IP150.ovpn --auth-user-pass /home/huong/openvpn_login.conf
+ExecStart=/usr/sbin/openvpn --config /home/huong/VisualWeber_IP150.ovpn --auth-user-pass /home/huong/openvpn_login.conf --ping 10 --ping-restart 60 --persist-tun --persist-key --resolv-retry infinite
 Restart=always
-RestartSec=30
+RestartSec=10
 TimeoutStopSec=60
 
 [Install]
