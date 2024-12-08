@@ -1,9 +1,0 @@
-b1: mở thư mục dự án
-b2: cd đến backend: cd backend
-b3: composer i
-b4: npm i
-b5: npm audit fix
-b6: coppy .env.example ra tạo file env và dán vào
-b7: php artisan key:generate
-b8: php artisan jwt:secrect
-b9: php artisan migrate

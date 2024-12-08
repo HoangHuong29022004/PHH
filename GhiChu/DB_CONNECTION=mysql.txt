@@ -23,3 +23,7 @@ php artisan module:make-migration create_products_table Product
 php artisan module:migrate TenBange
 
 php artisan module:make-migration create_carts_table Cart
+
+
+composer require tymon/jwt-auth
+composer require php-open-source-saver/jwt-auth
