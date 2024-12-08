@@ -1,75 +1,59 @@
 # Hướng Dẫn Cài Đặt Thủ Công File .deb và AppImage
 
-## Cài Đặt File .deb
+1. Cấp quyền thực thi cho tệp AppImage
+Để đảm bảo tệp AppImage có thể chạy, bạn cần cấp quyền thực thi:
 
-### Bước 1: Tìm File .deb
-- Đảm bảo file `.deb` của bạn nằm trong thư mục `~/Downloads` hoặc một thư mục khác mà bạn biết.
+bash
+Sao chép mã
+chmod +x ~/Downloads/cursor-*.AppImage
+2. Giải nén AppImage
+Chạy lệnh sau để giải nén nội dung AppImage:
 
-### Bước 2: Cài Đặt File .deb
-1. Mở terminal và điều hướng đến thư mục chứa file `.deb`:
-   ```bash
-   cd ~/Downloads
-   ```
+bash
+Sao chép mã
+~/Downloads/cursor-*.AppImage --appimage-extract
+Kết quả sẽ tạo ra một thư mục có tên squashfs-root trong cùng thư mục với tệp AppImage.
 
-2. Sử dụng `dpkg` để cài đặt file:
-   ```bash
-   sudo dpkg -i tên-file.deb
-   ```
+3. Kiểm tra icon
+Tìm file cursor.png trong thư mục squashfs-root. Sử dụng lệnh:
 
-3. Nếu có lỗi phụ thuộc, sửa lỗi bằng `apt-get`:
-   ```bash
-   sudo apt-get install -f
-   ```
+bash
+Sao chép mã
+ls ~/Downloads/squashfs-root/
+Bạn sẽ thấy danh sách các file, bao gồm cursor.png. Sao chép file icon này về đúng thư mục icon cá nhân:
 
-## Cài Đặt File AppImage
+bash
+Sao chép mã
+cp ~/Downloads/squashfs-root/cursor.png ~/.local/share/icons/
+4. Tạo shortcut (Desktop Entry)
+Tạo tệp cursor.desktop để ứng dụng hiển thị trong menu ứng dụng. Chạy:
 
-### Bước 1: Tìm File AppImage
-- Đảm bảo file `.AppImage` của bạn nằm trong thư mục `~/Downloads` hoặc một thư mục khác mà bạn biết.
+bash
+Sao chép mã
+nano ~/.local/share/applications/cursor.desktop
+Dán nội dung sau vào:
 
-### Bước 2: Cài Đặt File AppImage
-1. Mở terminal và điều hướng đến thư mục chứa file `.AppImage`:
-   ```bash
-   cd ~/Downloads
-   ```
+plaintext
+Sao chép mã
+[Desktop Entry]
+Name=Cursor
+Exec=/home/huong/Downloads/cursor-0.43.6-build-241206z7j6me2e2-x86_64.AppImage --no-sandbox
+Icon=/home/huong/.local/share/icons/cursor.png
+Type=Application
+Terminal=false
+Categories=Development;
+Lưu lại bằng cách nhấn Ctrl + O, nhấn Enter, rồi thoát bằng Ctrl + X.
 
-2. Cấp quyền thực thi cho file AppImage:
-   ```bash
-   chmod +x tên-file.AppImage
-   ```
+5. Làm mới hệ thống desktop
+Cập nhật lại hệ thống để nhận shortcut:
 
-3. Chạy file AppImage:
-   ```bash
-   ./tên-file.AppImage
-   ```
+bash
+Sao chép mã
+update-desktop-database ~/.local/share/applications/
+6. Chạy ứng dụng
+Bây giờ bạn có thể tìm Cursor trong menu ứng dụng hoặc chạy bằng lệnh:
 
-### Tùy Chọn: Tạo Shortcut cho AppImage
-1. Di chuyển file AppImage vào thư mục `/opt`:
-   ```bash
-   sudo mv tên-file.AppImage /opt/
-   ```
-
-2. Tạo file `.desktop` để thêm ứng dụng vào menu:
-   ```bash
-   sudo nano /usr/share/applications/tên-file.desktop
-   ```
-
-3. Thêm nội dung sau vào file `.desktop`:
-   ```plaintext
-   [Desktop Entry]
-   Name=Tên Ứng Dụng
-   Exec=/opt/tên-file.AppImage --no-sandbox
-   Type=Application
-   Categories=Development;
-   ```
-
-4. Lưu và thoát (`Ctrl + O`, `Enter`, `Ctrl + X`).
-
-5. Cấp quyền thực thi cho file AppImage trong `/opt`:
-   ```bash
-   sudo chmod +x /opt/tên-file.AppImage
-   ```
-
-## Lưu Ý
-- Đảm bảo bạn có quyền `sudo` để thực hiện các thao tác cài đặt.
-- Chỉ cài đặt các file từ nguồn đáng tin cậy để tránh rủi ro bảo mật.
-- Nếu gặp lỗi, kiểm tra lại các bước và đảm bảo rằng bạn đã thực hiện đúng các lệnh.
+bash
+Sao chép mã
+~/Downloads/cursor-0.43.6-build-241206z7j6me2e2-x86_64.AppImage --no-sandbox
+Nếu có lỗi gì xảy ra trong quá trình cài đặt, gửi lại log để mình hỗ trợ nhé! 😊
