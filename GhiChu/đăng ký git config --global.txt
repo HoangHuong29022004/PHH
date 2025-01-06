@@ -1,2 +1,13 @@
-git config --global user.email "huong.ph@fsofts.com"
-git config --global user.name "Hoàng Hương"
+[user]
+	email = huong.ph@fsofts.com
+	name = Hoang Huong | apikey:d0851193d83d8c0dc0833e050f2c432f59dd585145eb42c2440363789246f383
+	openproject = apikey:ac9d636c846da3abafb90fb47b1b7f9ba15f3d21797cc6bf854133ff044e489b
+
+[core]
+	compression = 9
+[http]
+	postBuffer = 1048576000
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999
+
+code ~/.gitconfig
