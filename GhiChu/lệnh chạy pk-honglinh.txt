@@ -3,3 +3,10 @@ pnpm i
 sudo sysctl fs.inotify.max_user_watches=524288
 pnpm dev	
 
+
+
+########################################################
+
+rm -rf pkhl.code/public/
+mv pk-honglinh.code/* pkhl.code
+mv pk-honglinh.code/.* pkhl.code
